@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h1{
+        @apply text-7xl tracking-wide leading-tight font-extrabold uppercase
+    }
+}
+
+@layer components{
+    .section-headText {
+        @apply text-[56px] tracking-wide font-extrabold mb-8
+    }
+    .section-subText {
+        @apply tracking-wider font-medium uppercase
+    }
+    .form-label {
+        @apply text-lg font-medium tracking-wide
+    }
+    .form-input {
+        @apply w-full bg-[#0a1130] text-white placeholder:text-gray-600 text-lg font-medium tracking-wide rounded-xl border-none outline-none px-5 py-3 mt-2 mb-6
+    }
+}
+
+@layer utilities{
+    .nav-links::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: #fde68a;
+        margin: auto;
+        transition: 0.5s;
+    }
+    
+    .nav-links:hover::after {
+        width: 80%;
+    }
+}
+
