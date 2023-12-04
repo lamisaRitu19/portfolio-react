@@ -18,7 +18,7 @@ export default {
       },
       backgroundImage: {
         "hero-pattern":
-          "url('/src/assets/images/adelin-preda--tOr_T4qTpQ-unsplash.jpg')",
+          "url('/src/assets/background/adelin-preda--tOr_T4qTpQ-unsplash.jpg')",
       },
     },
   },

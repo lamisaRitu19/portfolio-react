@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import initial from '../assets/images/LR-removebg-preview.png';
+import { initial } from '../assets/index';
 import { navlinks } from '../constants/constants';
 
 const Navbar = () => {
