@@ -5,43 +5,44 @@ import { textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { download, docs } from '../assets';
 
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
         contentStyle={{
-        background: '#eaeaec',
-        color: '#292929',
-        boxShadow:
-            'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+            background: 'linear-gradient(90deg, rgba(120,40,80,1) 0%, rgba(0,0,40,1) 100%)',
+            color: '#f0f0f0',
+            boxShadow:
+                '0px 2px 100px 2px #28283d',
+            borderRadius: '20px'
         }}
         contentArrowStyle={{
-        borderRight: '7px solid  #232631',
+            borderRight: '6px solid #782850',
         }}
         date={
-        <div>
-            <h3 className="text-dim text-[18px] font-bold font-beckman">
-            {experience.date}
-            </h3>
-        </div>
+            <div>
+                <h3 className="text-lightGrey text-lg font-bold">
+                    {experience.date}
+                </h3>
+            </div>
         }
         iconStyle={{ background: experience.iconBg }}
         icon={
-        <div className="flex justify-center items-center w-full h-full">
-            <img
-            src={experience.icon}
-            alt={experience.company_name}
-            />
-        </div>
+            <div className="w-full h-full flex justify-center items-center">
+                <img
+                src={experience.icon}
+                alt={experience.company_name}
+                />
+            </div>
         }>
         <div>
-        <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
-            {experience.title}
-        </h3>
-        <p
-            className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
-            style={{ margin: 0 }}>
-            {experience.company_name}
-        </p>
+            <h3 className="text-2xl font-bold tracking-widest mb-2">
+                {experience.title}
+            </h3>
+            <p
+                className="text-lightGrey" style={{ margin: 0 }}>
+                {experience.company_name}
+            </p>
         </div>
     </VerticalTimelineElement>
 );
@@ -54,43 +55,37 @@ const Experience = () => {
                 <h3 className='section-headText'>Experience.</h3>
             </motion.div>
 
-            <div className="mt-20 flex flex-col">
+            <div className="flex flex-col mt-14">
                 <VerticalTimeline className="vertical-timeline-custom-line">
                 {experiences.map((experience, index) => (
                     <ExperienceCard key={index} experience={experience} />
                 ))}
                     <VerticalTimelineElement
                         contentStyle={{
-                        background: '#eaeaec',
-                        color: '#292929',
-                        boxShadow:
-                            'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                            background: 'linear-gradient(90deg, rgba(120,40,80,1) 0%, rgba(0,0,40,1) 100%)',
+                            color: '#f0f0f0',
+                            boxShadow:
+                                '0px 2px 100px 2px #28283d',
+                            borderRadius: '20px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
                         }}
                         contentArrowStyle={{
-                        borderRight: '7px solid  #232631',
+                            borderRight: '6px solid #782850',
                         }}
-                        iconStyle={{ background: '#333333' }}
+                        iconStyle={{ background: '#f0f0f0' }}
                         icon={
-                        <div className="flex justify-center items-center w-full h-full">
-                            <img
-                            src=''
-                            alt="resume"
-                            className="w-[45%] h-[45%] object-contain"
-                            />
-                        </div>
+                            <div className="w-full h-full flex justify-center items-center">
+                                <img
+                                src={docs}
+                                alt="docs"
+                                className="w-2/5"
+                                />
+                            </div>
                         }>
                         <button
-                        className="live-demo flex justify-between 
-                        sm:text-[18px] text-[14px] text-timberWolf 
-                        font-bold font-beckman items-center py-5 pl-3 pr-3 
-                        whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-                        w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-                        sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-                        hover:text-eerieBlack transition duration-[0.2s] 
-                        ease-in-out"
+                        className="flex justify-between items-center bg-whiteSmoke hover:bg-slate-300 text-[#000050] text-lg font-bold rounded-xl px-5 py-3 transition duration-500 ease-in-out"
                         onClick={() =>
                             window.open(
                             'resume link', //paste the link to your resume here
@@ -109,10 +104,9 @@ const Experience = () => {
                         }}>
                         MY RESUME
                         <img
-                            src=''
+                            src={download}
                             alt="download"
-                            className="download-btn sm:w-[26px] sm:h-[26px] 
-                            w-[23px] h-[23px] object-contain"
+                            className="w-8"
                         />
                         </button>
                     </VerticalTimelineElement>
@@ -123,3 +117,5 @@ const Experience = () => {
 };
 
 export default SectionWrapper(Experience, 'experience');
+
+// rgba(0, 0, 0, 0.3) 4px 10px 15px 3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px

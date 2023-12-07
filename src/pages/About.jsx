@@ -8,7 +8,7 @@ const About = () => {
         <div id='about' className='py-32 -mt-[6rem]'>
             <div>
                 <motion.div variants={textVariant()}>
-                    <p className='section-subText'>Introduction</p>
+                    <p className='section-subText'>What are my skills</p>
                     <h3 className='section-headText'>About Me.</h3>
                 </motion.div>
                 

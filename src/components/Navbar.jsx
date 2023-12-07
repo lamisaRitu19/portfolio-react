@@ -4,7 +4,7 @@ import { navlinks } from '../constants/constants';
 
 const Navbar = () => {
     return (
-        <div className='fixed top-0 left-0 right-0 flex justify-between items-center bg-gradient-to-b from-[#1d3352] ... px-48 z-10'>
+        <div className='sticky top-0 flex justify-between items-center bg-gradient-to-b from-[#1d3352] ... px-48 z-10'>
             <a href='#hero'><img src={initial} alt="LR" className='w-28' /></a>
             <ul className='flex gap-14'>
                 {

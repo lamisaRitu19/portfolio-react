@@ -12,13 +12,13 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='bg-[#0a1130] text-[#f0f8ff] text-left'>
-      <Navbar></Navbar>
+    <div className='bg-black text-whiteSmoke text-left'>
       <Hero></Hero>
+      {/* <Navbar></Navbar> */}
       <div className='container'>
         <About></About>
         <Experience></Experience>
-        <Skills></Skills>
+        {/* <Skills></Skills> */}
         <Projects></Projects>
         <Contact></Contact>
       </div>

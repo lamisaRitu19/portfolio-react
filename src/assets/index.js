@@ -13,6 +13,13 @@ import node from "./technologies/nodejs.png";
 import git from "./technologies/git.png";
 import figma from "./technologies/figma.png";
 
+import famiPlasma from "./projects/famiPlasma.png";
+import imageGallery from "./projects/imageGallery.png";
+import preAdvisingPortal from "./projects/preAdvisingPortal.png";
+import geniusCar from "./projects/geniusCar.png";
+
+import download from "./icons/download.png";
+import docs from "./icons/docs.png";
 import mail from "./icons/mail.png";
 
 export {
@@ -28,5 +35,11 @@ export {
   node,
   git,
   figma,
+  famiPlasma,
+  imageGallery,
+  preAdvisingPortal,
+  geniusCar,
+  download,
+  docs,
   mail,
 };

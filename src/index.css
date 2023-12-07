@@ -4,7 +4,7 @@
 
 @layer base{
     h1{
-        @apply text-7xl tracking-wide leading-tight font-extrabold uppercase
+        @apply text-5xl tracking-wide leading-tight font-extrabold uppercase
     }
 }
 
@@ -13,13 +13,13 @@
         @apply text-[56px] tracking-wide font-extrabold mb-8
     }
     .section-subText {
-        @apply tracking-wider font-medium uppercase
+        @apply text-nobel tracking-wider font-medium uppercase
     }
     .form-label {
         @apply text-lg font-medium tracking-wide
     }
     .form-input {
-        @apply w-full bg-[#0a1130] text-white placeholder:text-gray-600 text-lg font-medium tracking-wide rounded-xl border-none outline-none px-5 py-3 mt-2 mb-6
+        @apply w-full bg-slate-800 text-white placeholder:text-gray-600 text-lg font-medium tracking-wide rounded-xl border-none outline-none px-5 py-3 mt-2 mb-6
     }
 }
 
